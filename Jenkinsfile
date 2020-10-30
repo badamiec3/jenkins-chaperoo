@@ -27,6 +27,7 @@ pipeline {
       steps {
 
         sh 'cd chaperootodo_client'
+        sh 'pwd'
         sh "docker-compose pull && docker-compose up -d"
         
       }
