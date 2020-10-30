@@ -7,7 +7,7 @@ pipeline {
     stage('Stage 1: Clone Repo') {
       steps {
 
-      sh 'git clone https://github.com/badamiec3/chaperootodo_client-.git' 
+      sh 'git clone https://github.com/badamiec3/chaperootodo_client-.git' .
      
       }
     }
@@ -25,7 +25,7 @@ pipeline {
     }
      stage('Stage 3: Deploy') {
       steps {
-        sh 'cd /home/jenkins/.jenkins/workspace/jenkins-chaperoo/chaperootodo_client-'
+
         sh 'pwd'
         sh "docker-compose pull && docker-compose up -d"
         
