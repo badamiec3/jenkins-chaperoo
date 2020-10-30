@@ -25,9 +25,11 @@ pipeline {
     }
      stage('Stage 3: Deploy') {
       steps {
-       
+        
+        sh 'ls'
         sh 'chmod 777 /home/jenkins/.jenkins/workspace/jenkins-chaperoo/chaperootodo_client'
         sh "cd /home/jenkins/.jenkins/workspace/jenkins-chaperoo/chaperootodo_client"
+        sh 'ls'
         sh 'pwd'
         sh "docker-compose pull && docker-compose up -d"
         
