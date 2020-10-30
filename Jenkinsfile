@@ -7,7 +7,7 @@ pipeline {
     stage('Stage 1: Clone Repo') {
       steps {
 
-      sh 'git clone https://github.com/badamiec3/chaperootodo_client-.git' .
+      sh 'git clone https://github.com/badamiec3/chaperootodo_client-.git .'
      
       }
     }
