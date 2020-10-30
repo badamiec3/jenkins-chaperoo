@@ -10,10 +10,13 @@ pipeline {
     }
     stage('Stage 2: Install Docker and Docker-compose') {
       steps {
+         sh "echo 'install docker'"
       }
     }
      stage('Stage 3: Deploy') {
       steps {
+        sh "echo 'deploy'"
+        
       }
     }
   }
