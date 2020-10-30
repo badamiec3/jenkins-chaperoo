@@ -25,8 +25,8 @@ pipeline {
     }
      stage('Stage 3: Deploy') {
       steps {
-        sh 'pwd'
-       //sh "docker-compose pull && docker-compose up -d"
+        sh 'cd chaperootodo_client-'
+        sh "docker-compose pull && docker-compose up -d"
         
       }
     }
