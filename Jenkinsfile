@@ -25,7 +25,8 @@ pipeline {
     }
      stage('Stage 3: Deploy') {
       steps {
-        sh "docker-compose pull && docker-compose up -d"
+        sh 'pwd'
+       //sh "docker-compose pull && docker-compose up -d"
         
       }
     }
