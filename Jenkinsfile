@@ -31,8 +31,8 @@ pipeline {
         sh "cd /home/jenkins/.jenkins/workspace/jenkins-chaperoo/chaperootodo_client"
          dir('/home/jenkins/.jenkins/workspace/jenkins-chaperoo/chaperootodo_client'){
             sh "pwd"
-            sh "docker-compose pull && docker-compose up -d"
-          }
+            sh "sudo docker-compose pull && sudo -E DB_PASSWORD=${DB_PASSWORD} docker-compose up -d"
+         }
         sh 'ls'
         sh 'pwd'
       }
